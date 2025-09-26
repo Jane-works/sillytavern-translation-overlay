@@ -1,4 +1,4 @@
-#translation-overlay-pro {
+#translation-overlay-st {
     position: fixed;
     z-index: 10000;
     background: rgba(30, 30, 46, 0.98);
@@ -236,19 +236,19 @@
 }
 
 /* 滚动条样式 */
-#translation-overlay-pro::-webkit-scrollbar {
+#translation-overlay-st::-webkit-scrollbar {
     width: 6px;
 }
 
-#translation-overlay-pro::-webkit-scrollbar-track {
+#translation-overlay-st::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.05);
 }
 
-#translation-overlay-pro::-webkit-scrollbar-thumb {
+#translation-overlay-st::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 3px;
 }
 
-#translation-overlay-pro::-webkit-scrollbar-thumb:hover {
+#translation-overlay-st::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.3);
 }
