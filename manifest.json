@@ -1,7 +1,7 @@
 {
-    "name": "Translation Overlay",
-    "version": "1.0.0",
-    "description": "AI实时翻译悬浮窗，支持<char>标签内容翻译",
+    "name": "Translation Overlay Pro",
+    "version": "2.0.0",
+    "description": "无需配置的AI实时翻译悬浮窗，支持API设置和模型选择",
     "author": "YourName",
     "license": "MIT",
     "repository": {
