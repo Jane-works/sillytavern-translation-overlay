@@ -1,23 +1,35 @@
-# SillyTavern 翻译悬浮窗插件
+# SillyTavern 翻译悬浮窗插件 Pro
 
-实时翻译<char>标签内容的AI悬浮窗插件。
+无需配置文件的AI实时翻译悬浮窗，支持直接在界面设置API和选择模型。
 
 ## 功能特性
-- 🎯 实时检测并翻译<char>标签内容
-- 🖥️ 可拖动、可调整大小的悬浮窗
-- 🌍 支持多语言翻译
-- ⚙️ 高度可配置
-- 🔌 支持主流AI API
+- 🚀 **无需配置文件** - 所有设置都在悬浮窗界面完成
+- 🔧 **可视化API设置** - 直接在界面填写API信息
+- 🤖 **自动获取模型** - 一键拉取可用模型列表
+- 🌍 **多语言支持** - 支持中英日韩等语言翻译
+- 💾 **自动保存** - 设置自动保存到浏览器本地存储
+- 🔍 **连接测试** - 测试API连接是否正常
 
 ## 安装方法
-1. 下载本插件到SillyTavern的public/plugins目录
-2. 复制config.example.js为config.js并配置API
-3. 在SillyTavern中启用插件
+1. 下载本插件到SillyTavern的`public/plugins`目录
+2. 刷新SillyTavern页面
+3. 悬浮窗会自动出现在屏幕上
 
-## API配置示例
-```javascript
-// OpenAI格式API
-apiUrl: 'https://api.openai.com/v1/chat/completions',
+## 使用方法
+1. 点击悬浮窗右上角的设置按钮(⚙️)
+2. 填写您的API地址和密钥
+3. 点击"获取模型"按钮拉取可用模型
+4. 选择目标语言和模型
+5. 点击"保存设置"
+6. 开始使用翻译功能
 
-// 或DeepSeek格式API  
-apiUrl: 'https://api.deepseek.com/chat/completions',
+## 支持的API
+- OpenAI格式API (OpenAI, DeepSeek等)
+- 任何兼容OpenAI API格式的服务
+- 自动尝试多个模型端点
+
+## 快捷键
+- 拖动标题栏可移动窗口
+- 拖动边缘可调整大小
+- 点击−按钮最小化内容
+- 点击×按钮关闭窗口
