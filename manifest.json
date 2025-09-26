@@ -8,5 +8,5 @@
     "tags": "translation, overlay, char, ai",
     "instructions": "安装后刷新页面，悬浮窗将自动出现在屏幕上。点击设置按钮配置API信息。",
     "works_with": ["1.10.0+"],
-    "homepage": ""
+    "homepage": "https://github.com/yourusername/sillytavern-translation-overlay"
 }
