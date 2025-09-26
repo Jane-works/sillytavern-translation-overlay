@@ -1,3 +1,4 @@
+/* SillyTavern 翻译悬浮窗样式 */
 #translation-overlay-st {
     position: fixed;
     z-index: 10000;
@@ -11,6 +12,7 @@
     min-width: 300px;
     min-height: 200px;
     backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
 }
 
 .translation-header {
@@ -119,16 +121,22 @@
 .status-text.success { color: #a6e3a1; }
 .status-text.error { color: #f38ba8; }
 .status-text.loading { color: #89b4fa; }
+.status-text.warning { color: #f9e2af; }
 
 .model-info {
     font-size: 10px;
     color: #6c7086;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /* 设置面板样式 */
 .settings-panel {
     height: calc(100% - 57px);
     padding: 16px;
+    overflow-y: auto;
 }
 
 .settings-header {
@@ -187,6 +195,20 @@
     background-size: 16px;
 }
 
+.input-group small {
+    color: #6c7086;
+    font-size: 11px;
+}
+
+.model-select-container {
+    display: flex;
+    gap: 8px;
+}
+
+.model-select-container select {
+    flex: 1;
+}
+
 .settings-actions {
     display: flex;
     gap: 10px;
@@ -225,14 +247,38 @@
 }
 
 .fetch-models {
-    margin-top: 8px;
     background: #cba6f7;
     color: #1e1e2e;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .fetch-models:hover {
     background: #f5c2e7;
+}
+
+.settings-info {
+    background: rgba(17, 17, 27, 0.5);
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 10px;
+}
+
+.settings-info h4 {
+    color: #cdd6f4;
+    margin: 0 0 8px 0;
+    font-size: 13px;
+}
+
+.settings-info ul {
+    color: #a6adc8;
+    font-size: 12px;
+    margin: 0;
+    padding-left: 16px;
+}
+
+.settings-info li {
+    margin-bottom: 4px;
 }
 
 /* 滚动条样式 */
@@ -251,4 +297,16 @@
 
 #translation-overlay-st::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.3);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    #translation-overlay-st {
+        min-width: 280px;
+        max-width: 90vw;
+    }
+    
+    .model-select-container {
+        flex-direction: column;
+    }
 }
