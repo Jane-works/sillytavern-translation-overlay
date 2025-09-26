@@ -1,92 +1,254 @@
-#translation-overlay {
+#translation-overlay-pro {
     position: fixed;
     z-index: 10000;
-    background: rgba(25, 25, 35, 0.95);
-    border: 1px solid #444;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    font-family: 'Microsoft YaHei', sans-serif;
+    background: rgba(30, 30, 46, 0.98);
+    border: 1px solid #585b70;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    font-family: 'Microsoft YaHei', 'Segoe UI', sans-serif;
     overflow: hidden;
     resize: both;
-    min-width: 250px;
-    min-height: 150px;
+    min-width: 300px;
+    min-height: 200px;
+    backdrop-filter: blur(10px);
 }
 
 .translation-header {
-    background: rgba(40, 40, 50, 0.9);
-    padding: 8px 12px;
+    background: linear-gradient(135deg, #1e1e2e 0%, #181825 100%);
+    padding: 12px 16px;
     cursor: grab;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #555;
+    border-bottom: 1px solid #313244;
     user-select: none;
 }
 
 .translation-title {
-    color: #e0e0e0;
-    font-weight: bold;
+    color: #cdd6f4;
+    font-weight: 600;
     font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .translation-controls {
     display: flex;
-    gap: 5px;
-}
-
-.control-btn {
-    background: none;
-    border: none;
-    color: #aaa;
-    cursor: pointer;
-    padding: 2px 8px;
-    border-radius: 3px;
-    font-size: 16px;
-    line-height: 1;
-}
-
-.control-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-}
-
-.translation-content {
-    padding: 12px;
-    height: calc(100% - 45px);
-    display: flex;
-    flex-direction: column;
     gap: 8px;
 }
 
-.original-text, .translated-text {
-    color: #ccc;
+.control-btn {
+    background: rgba(166, 173, 200, 0.1);
+    border: none;
+    color: #a6adc8;
+    cursor: pointer;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1;
+    transition: all 0.2s ease;
+}
+
+.control-btn:hover {
+    background: rgba(166, 173, 200, 0.2);
+    color: #cdd6f4;
+    transform: translateY(-1px);
+}
+
+.translation-content {
+    padding: 16px;
+    height: calc(100% - 57px);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.text-display {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.original-section, .translated-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.original-section label, .translated-section label {
+    color: #a6adc8;
     font-size: 12px;
-    line-height: 1.4;
+    font-weight: 500;
+}
+
+.original-text, .translated-text {
+    background: rgba(17, 17, 27, 0.5);
+    border: 1px solid #313244;
+    border-radius: 8px;
+    padding: 10px;
+    color: #cdd6f4;
+    font-size: 13px;
+    line-height: 1.5;
+    min-height: 60px;
+    max-height: 120px;
+    overflow-y: auto;
     word-wrap: break-word;
 }
 
 .translated-text {
-    color: #8ab4f8;
-    font-weight: bold;
+    color: #a6e3a1;
+    border-color: #45475a;
 }
 
 .translation-status {
-    color: #888;
-    font-size: 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-top: auto;
-    text-align: center;
+    padding-top: 12px;
+    border-top: 1px solid #313244;
+}
+
+.status-text {
+    font-size: 11px;
+    color: #a6adc8;
+}
+
+.status-text.success { color: #a6e3a1; }
+.status-text.error { color: #f38ba8; }
+.status-text.loading { color: #89b4fa; }
+
+.model-info {
+    font-size: 10px;
+    color: #6c7086;
+}
+
+/* 设置面板样式 */
+.settings-panel {
+    height: calc(100% - 57px);
+    padding: 16px;
+}
+
+.settings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #313244;
+}
+
+.settings-header h3 {
+    color: #cdd6f4;
+    margin: 0;
+    font-size: 16px;
+}
+
+.settings-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-group label {
+    color: #cdd6f4;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.input-group input, .input-group select {
+    background: rgba(17, 17, 27, 0.8);
+    border: 1px solid #313244;
+    border-radius: 6px;
+    padding: 10px;
+    color: #cdd6f4;
+    font-size: 13px;
+    transition: border-color 0.2s ease;
+}
+
+.input-group input:focus, .input-group select:focus {
+    outline: none;
+    border-color: #89b4fa;
+}
+
+.input-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a6adc8'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+}
+
+.settings-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+}
+
+.btn-primary {
+    background: #74c7ec;
+    color: #1e1e2e;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background: #89b4fa;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background: rgba(166, 173, 200, 0.1);
+    color: #a6adc8;
+}
+
+.btn-secondary:hover {
+    background: rgba(166, 173, 200, 0.2);
+    color: #cdd6f4;
+}
+
+.fetch-models {
+    margin-top: 8px;
+    background: #cba6f7;
+    color: #1e1e2e;
+    font-weight: 500;
+}
+
+.fetch-models:hover {
+    background: #f5c2e7;
 }
 
 /* 滚动条样式 */
-#translation-overlay::-webkit-scrollbar {
+#translation-overlay-pro::-webkit-scrollbar {
     width: 6px;
 }
 
-#translation-overlay::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
+#translation-overlay-pro::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
 }
 
-#translation-overlay::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
+#translation-overlay-pro::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 3px;
+}
+
+#translation-overlay-pro::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
 }
