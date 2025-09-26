@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实时翻译悬浮窗</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="translation-container">
+        <div id="config-panel">
+            <h3>翻译API配置</h3>
+            <div class="input-group">
+                <label>API端点URL:</label>
+                <input type="text" id="api-url" placeholder="https://api.example.com/v1">
+            </div>
+            <div class="input-group">
+                <label>API密钥:</label>
+                <input type="password" id="api-key" placeholder="输入你的API密钥">
+            </div>
+            <div class="input-group">
+                <label>选择模型:</label>
+                <select id="model-select">
+                    <option value="">-- 先获取模型 --</option>
+                </select>
+            </div>
+            <button id="fetch-models">获取可用模型</button>
+            <button id="save-config">保存配置</button>
+            <span id="status"></span>
+        </div>
+        
+        <div id="translation-panel">
+            <h3>实时翻译</h3>
+            <div id="original-text" class="text-box"></div>
+            <div id="translated-text" class="text-box"></div>
+        </div>
+    </div>
+    
+    <script src="overlay.js"></script>
+</body>
+</html>
