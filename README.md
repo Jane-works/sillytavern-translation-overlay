@@ -18,7 +18,7 @@
 1. 打开SillyTavern
 2. 进入扩展管理界面
 3. 选择"从URL安装"
-4. 输入以下URL：https://raw.githubusercontent.com/yourusername/sillytavern-translation-overlay/main/module.json
+4. 输入以下URL：https://github.com/Jane-works/sillytavern-translation-overlay.git
 5. 点击安装并重启SillyTavern
 
 ### 方法二：手动安装
