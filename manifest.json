@@ -1,0 +1,11 @@
+{
+    "name": "Translation Overlay",
+    "version": "1.0.0",
+    "description": "AI实时翻译悬浮窗，支持<char>标签内容翻译",
+    "author": "YourName",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yourusername/sillytavern-translation-overlay"
+    }
+}
