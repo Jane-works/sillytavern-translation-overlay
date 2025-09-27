@@ -77,4 +77,6 @@
 
 ## 许可证
 
-MIT License - 可自由使用和修改
+本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
