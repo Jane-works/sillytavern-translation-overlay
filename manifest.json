@@ -1,0 +1,44 @@
+{
+  "sillytavern-plugin": {
+    "name": "AI Translator Plugin",
+    "version": "1.0.0",
+    "description": "AI回复抓取和翻译悬浮窗口 - 可以抓取<char>标签内容并实时翻译",
+    "author": "YourName",
+    "repository": "https://github.com/yourusername/ai-translator-plugin",
+    "license": "MIT",
+    "entry": "script.js",
+    "styles": ["styles.css"],
+    "assets": [
+      "icons/icon16.png",
+      "icons/icon32.png",
+      "icons/icon48.png",
+      "icons/icon128.png"
+    ],
+    "dependencies": {
+      "draggable-js": "^1.0.0"
+    },
+    "permissions": [
+      "chat-monitor",
+      "floating-window",
+      "api-calls",
+      "notifications"
+    ],
+    "settings": {
+      "autoLoad": true,
+      "windowTitle": "AI翻译器",
+      "windowWidth": 350,
+      "windowHeight": 500,
+      "resizable": true,
+      "minimizable": true,
+      "closeable": true
+    },
+    "compatibility": {
+      "sillytavern": ">=1.10.0",
+      "browsers": ["chrome", "firefox", "edge"]
+    },
+    "build": {
+      "minify": true,
+      "sourceMap": false
+    }
+  }
+}
