@@ -1,0 +1,22 @@
+{
+  "name": "AI Translator Plugin",
+  "version": "1.0.0",
+  "description": "AI回复抓取和翻译悬浮窗口",
+  "author": "您的名字",
+  "license": "MIT",
+  "homepage": "https://github.com/yourusername/ai-translator-plugin",
+  "main": "script.js",
+  "scripts": [
+    "script.js"
+  ],
+  "styles": [
+    "styles.css"
+  ],
+  "tags": [
+    "translation",
+    "ai",
+    "floating-window"
+  ],
+  "host": "sillytavern",
+  "minHostVersion": "1.10.0"
+}
