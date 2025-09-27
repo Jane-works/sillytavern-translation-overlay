@@ -1,44 +1,36 @@
 {
-  "sillytavern-plugin": {
-    "name": "AI Translator Plugin",
+  "project": {
+    "name": "sillytavern-ai-translator-plugin",
     "version": "1.0.0",
     "description": "AI回复抓取和翻译悬浮窗口 - 可以抓取<char>标签内容并实时翻译",
+    "type": "sillytavern-plugin",
     "author": "YourName",
-    "repository": "https://github.com/yourusername/ai-translator-plugin",
     "license": "MIT",
-    "entry": "script.js",
-    "styles": ["styles.css"],
-    "assets": [
-      "icons/icon16.png",
-      "icons/icon32.png",
-      "icons/icon48.png",
-      "icons/icon128.png"
+    "repository": "https://github.com/yourusername/ai-translator-plugin",
+    "homepage": "https://github.com/yourusername/ai-translator-plugin#readme",
+    "bugs": "https://github.com/yourusername/ai-translator-plugin/issues",
+    "keywords": [
+      "sillytavern",
+      "translation",
+      "ai",
+      "char-tag",
+      "floating-window"
     ],
-    "dependencies": {
-      "draggable-js": "^1.0.0"
-    },
-    "permissions": [
-      "chat-monitor",
-      "floating-window",
-      "api-calls",
-      "notifications"
+    "files": [
+      "plugin.json",
+      "script.js",
+      "styles.css",
+      "icons/",
+      "README.md",
+      "LICENSE"
     ],
-    "settings": {
-      "autoLoad": true,
-      "windowTitle": "AI翻译器",
-      "windowWidth": 350,
-      "windowHeight": 500,
-      "resizable": true,
-      "minimizable": true,
-      "closeable": true
+    "installation": {
+      "method": "url-import",
+      "url": "https://raw.githubusercontent.com/yourusername/ai-translator-plugin/main/plugin.json"
     },
     "compatibility": {
       "sillytavern": ">=1.10.0",
-      "browsers": ["chrome", "firefox", "edge"]
-    },
-    "build": {
-      "minify": true,
-      "sourceMap": false
+      "browsers": ["chrome", "firefox", "edge", "safari"]
     }
   }
 }
