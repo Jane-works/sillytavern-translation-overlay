@@ -1,0 +1,51 @@
+{
+  "name": "sillytavern-ai-translator-plugin",
+  "version": "1.0.0",
+  "description": "AI回复抓取和翻译悬浮窗口 - 可以抓取<char>标签内容并实时翻译",
+  "main": "script.js",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "dev": "webpack --mode=development --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sillytavern",
+    "plugin",
+    "translation",
+    "ai",
+    "char-tag",
+    "floating-window"
+  ],
+  "author": "YourName <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ai-translator-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/ai-translator-plugin/issues"
+  },
+  "homepage": "https://github.com/yourusername/ai-translator-plugin#readme",
+  "dependencies": {
+    "draggable-js": "^1.0.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.4",
+    "css-loader": "^6.8.1",
+    "style-loader": "^3.3.3"
+  },
+  "files": [
+    "script.js",
+    "styles.css",
+    "plugin.json",
+    "icons/",
+    "README.md",
+    "LICENSE"
+  ],
+  "sillytavern": {
+    "plugin": true,
+    "name": "AI Translator Plugin",
+    "entry": "script.js"
+  }
+}
