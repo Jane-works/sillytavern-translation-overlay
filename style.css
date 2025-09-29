@@ -1,217 +1,51 @@
-/* AI翻译插件样式 */
-#ai-translator-window {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 320px;
-    background-color: #2d3748;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    border: 1px solid #4a5568;
-    z-index: 10000;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* translation-overlay/style.css */
+
+.translation-overlay {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 280px;
+  background: rgba(30, 30, 30, 0.95);
+  border: 1px solid #444;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #eee;
+  z-index: 9999;
 }
 
-.ai-translator-container {
-    color: #e2e8f0;
+.translation-overlay .overlay-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  background: #222;
+  border-bottom: 1px solid #444;
+  border-radius: 10px 10px 0 0;
+  font-weight: bold;
 }
 
-.window-header {
-    background-color: #4a5568;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: move;
+.translation-overlay .overlay-header button {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 14px;
+  cursor: pointer;
 }
 
-.window-title {
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.translation-overlay .overlay-header button:hover {
+  color: #fff;
 }
 
-.window-controls {
-    display: flex;
-    gap: 10px;
+.translation-overlay .overlay-content {
+  padding: 8px;
+  max-height: 160px;
+  overflow-y: auto;
+  line-height: 1.4;
 }
 
-.control-btn {
-    background: none;
-    border: none;
-    color: #e2e8f0;
-    cursor: pointer;
-    font-size: 18px;
-    width: 30px;
-    height: 30px;
-    border-radius: 3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.control-btn:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.window-body {
-    padding: 20px;
-}
-
-.section {
-    margin-bottom: 25px;
-}
-
-.section-title {
-    font-size: 16px;
-    margin-bottom: 15px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #4a5568;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #cbd5e0;
-}
-
-input, select {
-    width: 100%;
-    padding: 10px;
-    background-color: #4a5568;
-    border: 1px solid #718096;
-    border-radius: 5px;
-    color: #e2e8f0;
-    font-size: 14px;
-}
-
-input:focus, select:focus {
-    outline: none;
-    border-color: #4299e1;
-}
-
-.btn {
-    background-color: #4299e1;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 600;
-    transition: background-color 0.2s;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.btn:hover {
-    background-color: #3182ce;
-}
-
-.btn-secondary {
-    background-color: #718096;
-}
-
-.btn-secondary:hover {
-    background-color: #4a5568;
-}
-
-.btn-success {
-    background-color: #48bb78;
-}
-
-.btn-success:hover {
-    background-color: #38a169;
-}
-
-.btn-error {
-    background-color: #f56565;
-}
-
-.btn-error:hover {
-    background-color: #e53e3e;
-}
-
-.buttons-row {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.translation-area {
-    background-color: #2d3748;
-    border-radius: 5px;
-    padding: 15px;
-    margin-top: 20px;
-    border: 1px solid #4a5568;
-}
-
-.translation-text {
-    margin-bottom: 15px;
-}
-
-.translation-label {
-    font-size: 12px;
-    color: #a0aec0;
-    margin-bottom: 5px;
-}
-
-.translation-content {
-    background-color: #4a5568;
-    padding: 10px;
-    border-radius: 5px;
-    min-height: 60px;
-    max-height: 150px;
-    overflow-y: auto;
-    border: 1px solid #718096;
-    font-size: 14px;
-    line-height: 1.4;
-}
-
-.status-indicator {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin-right: 5px;
-}
-
-.status-connected {
-    background-color: #48bb78;
-}
-
-.status-disconnected {
-    background-color: #f56565;
-}
-
-.status-connecting {
-    background-color: #ed8936;
-    animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-    0% { opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; }
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-    #ai-translator-window {
-        width: calc(100% - 40px);
-        left: 20px;
-        right: 20px;
-        top: 20px;
-    }
+.translation-overlay .overlay-error {
+  padding: 4px 8px;
+  min-height: 16px;
 }
