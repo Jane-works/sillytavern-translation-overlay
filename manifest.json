@@ -45,7 +45,79 @@
     "closeable": true
   },
   "settings": [
-    // ... 设置配置保持不变
+    {
+      "id": "apiUrl",
+      "name": "API URL",
+      "type": "text",
+      "default": "https://api.openai.com/v1",
+      "placeholder": "请输入API端点URL",
+      "description": "AI API的服务地址"
+    },
+    {
+      "id": "apiKey",
+      "name": "API密钥",
+      "type": "password",
+      "default": "",
+      "placeholder": "输入您的API密钥",
+      "description": "用于验证API请求的密钥"
+    },
+    {
+      "id": "selectedModel",
+      "name": "AI模型",
+      "type": "select",
+      "default": "gpt-3.5-turbo",
+      "options": [
+        {"value": "gpt-3.5-turbo", "label": "GPT-3.5 Turbo"},
+        {"value": "gpt-4", "label": "GPT-4"},
+        {"value": "gpt-4-turbo", "label": "GPT-4 Turbo"},
+        {"value": "claude-3-opus", "label": "Claude 3 Opus"},
+        {"value": "claude-3-sonnet", "label": "Claude 3 Sonnet"},
+        {"value": "claude-3-haiku", "label": "Claude 3 Haiku"},
+        {"value": "custom", "label": "自定义模型"}
+      ],
+      "description": "选择用于翻译的AI模型"
+    },
+    {
+      "id": "translationLanguage",
+      "name": "翻译语言",
+      "type": "select",
+      "default": "zh-CN",
+      "options": [
+        {"value": "zh-CN", "label": "中文（简体）"},
+        {"value": "zh-TW", "label": "中文（繁体）"},
+        {"value": "en", "label": "英语"},
+        {"value": "ja", "label": "日语"},
+        {"value": "ko", "label": "韩语"},
+        {"value": "fr", "label": "法语"},
+        {"value": "de", "label": "德语"},
+        {"value": "es", "label": "西班牙语"},
+        {"value": "ru", "label": "俄语"}
+      ],
+      "description": "选择要翻译成的目标语言"
+    },
+    {
+      "id": "autoTranslate",
+      "name": "自动翻译",
+      "type": "checkbox",
+      "default": true,
+      "description": "启用后自动翻译AI回复中的<char>标签内容"
+    },
+    {
+      "id": "showNotifications",
+      "name": "显示通知",
+      "type": "checkbox",
+      "default": true,
+      "description": "翻译完成时显示桌面通知"
+    },
+    {
+      "id": "translationDelay",
+      "name": "翻译延迟(ms)",
+      "type": "number",
+      "default": 500,
+      "min": 0,
+      "max": 5000,
+      "description": "AI回复后等待多长时间开始翻译(毫秒)"
+    }
   ],
   "permissions": [
     "chat-monitor",
@@ -54,7 +126,6 @@
     "notifications",
     "storage"
   ],
-  // 移除了 icons 字段
   "compatibility": {
     "sillytavern": ">=1.10.0",
     "browsers": ["chrome", "firefox", "edge"]
