@@ -1,0 +1,11 @@
+{
+  "name": "sillytavern-translation-overlay",
+  "display_name": "Translation Overlay",
+  "version": "1.0.0",
+  "description": "在聊天窗口中自动显示翻译结果的悬浮窗扩展，支持自定义 API URL、Key、模型和目标语言。",
+  "author": "Jane",
+  "js": "script.js",
+  "panel": "panel.html",
+  "css": "style.css",
+  "icon": "icon.png"
+}
