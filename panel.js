@@ -48,13 +48,3 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         try {
-            // 获取现有所有设置，并更新或添加翻译相关的设置
-            const existingSettings = JSON.parse(localStorage.getItem(OVERLAY_STORAGE_KEY)) || {};
-            existingSettings.customTranslationApiUrl = customTranslationApiUrl;
-            existingSettings.customTranslationApiKey = customTranslationApiKey;
-
-            localStorage.setItem(OVERLAY_STORAGE_KEY, JSON.stringify(existingSettings));
-            showStatus("设置已成功保存！请关闭此窗口。", "success");
-
-            // 通知主插件重新加载设置。
-            // 由于 panel 和主插件是两个独立的
